@@ -5,11 +5,11 @@ import "./contact-page";
 import { loadContact } from "./contact-page";
 import { loadHeader } from "./header";
 import { loadPage } from "./home-page";
+import { loadStore } from "./store";
 
 const tabControl = (() => {
   loadHeader();
   loadPage();
-  let eventsLoaded = false;
   const mainDiv = document.querySelector("#content");
   const menuTab = document.querySelector(".change-tab-1");
   const storeTab = document.querySelector(".change-tab-2");
@@ -25,12 +25,16 @@ const tabControl = (() => {
       }
     }
   }
-menuTab.addEventListener('click', () => {
+  storeTab.addEventListener("click", () => {
+    removeChildren(mainDiv);
+    loadStore();
+  });
+  menuTab.addEventListener("click", () => {
     removeChildren(mainDiv);
     loadPage();
-})
-contactTab.addEventListener('click', () => {
+  });
+  contactTab.addEventListener("click", () => {
     removeChildren(mainDiv);
     loadContact();
-})
+  });
 })();
