@@ -1,9 +1,9 @@
 import "./style.css";
 import "./normalize.css";
 
-function loadPage() {
-  const mainDiv = document.querySelector("#content");
-/*   const header = document.createElement("header");
+function loadContact ()  {
+    const mainDiv = document.querySelector("#content");
+  /* const header = document.createElement("header");
   const headerDivWrapper = document.createElement("div");
   const headerDivTitle = document.createElement("div");
   const titleH1 = document.createElement("h1");
@@ -27,6 +27,11 @@ function loadPage() {
   const mainProduct3 = document.createElement("div");
   const mainProduct3H3 = document.createElement("h3");
   const mainProduct3Para = document.createElement("p");
+
+const description1 = document.createElement('p');
+const description2 = document.createElement('p');
+const description3 = document.createElement('p');
+
 /*   headerDivWrapper.classList.add("wrapper");
   headerDivTitle.classList.add("title");
   headerDivEnd.classList.add("wrapper-end");
@@ -37,26 +42,28 @@ function loadPage() {
   mainProduct1.classList.add("product");
   mainProduct2.classList.add("product");
   mainProduct3.classList.add("product");
-
-/*   titleH1.textContent = "Shirley Tacos";
+/* 
+  titleH1.textContent = "Shirley Tacos";
   headerList1.textContent = "Menu";
   headerList2.textContent = "Online Stores";
   headerList3.textContent = "Contact Us"; */
 
-  mainBackgroundImage.setAttribute("src", "./tacos.jpg");
-  mainBackgroundImage.setAttribute("alt", "City Background");
+  description1.textContent = "Phone: 12345689 email: something@something"
+  description2.textContent = "Phone: 12345689 email: something@something"
+  description3.textContent = "Phone: 12345689 email: something@something"
 
-  mainH2.textContent = "Our Products";
-  mainProduct1H3.textContent = "Fish Tacos";
-  mainProduct1Para.textContent = "Tacos with fish, what did you expect?";
 
-  mainProduct2H3.textContent = "Pork Tacos";
-  mainProduct2Para.textContent = "Pulled pork on tacos with sauce";
+  mainH2.textContent = "Our Owners";
+  mainProduct1H3.textContent = "Someones NAme";
+  mainProduct1Para.textContent = "A long description to describe someone";
 
-  mainProduct3H3.textContent = "Brisket Tacos";
-  mainProduct3Para.textContent = "Brisket on tortilla, thats pretty much it...";
+  mainProduct2H3.textContent = "someones name 2";
+  mainProduct2Para.textContent = "a shorter description";
 
-/*   mainDiv.appendChild(header); */
+  mainProduct3H3.textContent = "someones name 3";
+  mainProduct3Para.textContent = "something something description";
+
+  mainDiv.appendChild(header);
   mainDiv.appendChild(main);
 
 /*   header.appendChild(headerDivWrapper);
@@ -73,18 +80,21 @@ function loadPage() {
   mainFlexGrid.appendChild(mainBackgroundImage);
   mainFlexGrid.appendChild(mainH2);
   mainFlexGrid.appendChild(mainProductContainer);
-
+  
   mainProductContainer.appendChild(mainProduct1H3);
+  mainProductContainer.appendChild(description1);
   mainProductContainer.appendChild(mainProduct1);
   mainProductContainer.appendChild(mainProduct1Para);
 
   mainProductContainer.appendChild(mainProduct2H3);
+  mainProductContainer.appendChild(description2);
   mainProductContainer.appendChild(mainProduct2);
   mainProductContainer.appendChild(mainProduct2Para);
 
   mainProductContainer.appendChild(mainProduct3H3);
+  mainProductContainer.appendChild(description3);
   mainProductContainer.appendChild(mainProduct3);
   mainProductContainer.appendChild(mainProduct3Para);
-}
+};
 
-export { loadPage };
+export { loadContact };
