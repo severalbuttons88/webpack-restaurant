@@ -1,12 +1,11 @@
 import "./style.css";
 import "./normalize.css";
-import "./home-page";
-import "./contact-page";
-import { loadContact } from "./contact-page";
-import { loadHeader } from "./header";
-import { loadPage } from "./home-page";
-import { loadStore } from "./store";
+import loadPage from "./home-page";
+import loadContact from "./contact-page";
+import loadHeader from "./header";
+import loadStore from "./store";
 
+// eslint-disable-next-line no-unused-vars
 const tabControl = (() => {
   loadHeader();
   loadPage();
@@ -17,12 +16,10 @@ const tabControl = (() => {
 
   function removeChildren(parent) {
     while (parent.firstChild) {
-      console.log(parent.lastChild.id);
       if (parent.lastChild.id === "header") {
         return;
-      } else {
-        parent.removeChild(parent.lastChild);
       }
+      parent.removeChild(parent.lastChild);
     }
   }
   storeTab.addEventListener("click", () => {
